@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.get('/henlo', (req, res) => {
+app.get('/all-tickets', (req, res) => {
     const ticketList = [
         {
             text: 'GET tickets',
@@ -16,8 +16,7 @@ app.get('/henlo', (req, res) => {
             isDone: false,
         },
     ];
-
-    res.type('json').send(ticketList);
+    res.json(ticketList);
 });
 
 app.listen(3000);
