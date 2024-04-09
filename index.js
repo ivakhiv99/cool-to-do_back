@@ -52,7 +52,6 @@ app.patch('/edit-ticket/:id', async (req, res) => {
 
 app.delete('/remove-ticket/:id', async (req, res) => {
     const id = req.params.id;
-
     const collection = getCollection();
     if (ObjectId.isValid(id)) {
         try {
